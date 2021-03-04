@@ -3,22 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from "./App"
 
-// function AppTwo() {
-//   return <h1>this is the second app</h1>;
-// }
+//this will create a variable called mostImportantItem with the value of the first item
+const [mostImportantItem] = ["boots", "tent", "head lamp"];
 
 ReactDOM.render(
   <App authorized={false}/>,
   document.getElementById('root')
 );
-
-
-// ReactDOM.render(
-//   <> {/**short-hand sintaxe for React.Fragment*/}
-//   {/* <React.Fragment> */}
-//     <App />
-//     <AppTwo />
-//   {/* </React.Fragment>, */}
-//   </>,
-//   document.getElementById('root')
-// );

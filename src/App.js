@@ -9,10 +9,11 @@ function RegularComponent() {
   return <h1>Regular info</h1> 
 }
 
-function App(props) {
+//instead of using 'props.authorized' we can use { authorized } and the props obj will de destructed into the variables declared here
+function App({ authorized }) {
   return (
     <>
-      {props.authorized ? <SecretComponent /> : <RegularComponent />}
+      {authorized ? <SecretComponent /> : <RegularComponent />}
     </>
   );
 }
