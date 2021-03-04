@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 
-function SecretComponent() {
-  return <h1>Secret info</h1> 
-}
+function App() {
+  const [emotion, setEmotion] = useState("happy");
 
-function RegularComponent() {
-  return <h1>Regular info</h1> 
-}
-
-//instead of using 'props.authorized' we can use { authorized } and the props obj will de destructed into the variables declared here
-function App({ authorized }) {
   return (
     <>
-      {authorized ? <SecretComponent /> : <RegularComponent />}
+      <h1>current emotion is {emotion}</h1>
+      <button onClick={() => setEmotion("happy")}>Happy</button>
+      <button onClick={() => setEmotion("frustrated")}>Frustrate</button>
+      <button onClick={() => setEmotion("enthusiatic")}>Enthuse</button>
     </>
   );
 }
