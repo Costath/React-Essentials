@@ -4,6 +4,6 @@ import './index.css';
 import App from "./App"
 
 ReactDOM.render(
-  <App />,
+  <App login="Costath"/>,
   document.getElementById('root')
 );
