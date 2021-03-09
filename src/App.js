@@ -13,8 +13,14 @@ function App({ login }) {
       .then(setData);
   }, []);
   
-  if(data) {
-    return <div>{JSON.stringify(data)}</div>;
+  if (data) {
+    return (
+      <div>
+        <h1>{data.name}, aka {data.login}</h1>
+        <p>{data.location}</p>
+        <img alt={data.login} src={data.avatar_url}/>
+      </div>
+    );
   }
 
 
