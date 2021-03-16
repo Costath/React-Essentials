@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 export function Checkbox() {
     const [checked, toggle] = useReducer(
-        checked => !checked, // reducer function (taking the current value and returning it inverted)
+        checked => !checked, // reducer function, called here 'toggle' (taking the current value and returning it inverted)
         false // initial value
     );
     return(
